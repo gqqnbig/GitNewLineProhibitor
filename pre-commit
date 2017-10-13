@@ -17,7 +17,7 @@ re='\<asp:TextBox\b((?!MaxLength).)*>'
 
 # echo "$content" will preserve spaces and newlines in the variable,
 # whereas echo $content will replace these characters with a space.
-if echo "$content" | grep -P $re 
+if echo "$content" | grep -P --ignore-case $re
 then
   echo You doo doo, you need to specify a maxLength attribute on ALL asp:textbox elements
   exit 1
