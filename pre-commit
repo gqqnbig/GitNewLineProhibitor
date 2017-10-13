@@ -11,7 +11,7 @@ fi
 git diff --cached --name-only $against | while read line; do
 echo $line;
 
-# there should have space between = and $.
+# there should have no space between = and $.
 content=$(git diff --cached $line)
 re='\<asp:TextBox\b((?!MaxLength).)*>'
 
